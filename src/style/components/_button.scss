@@ -1,0 +1,39 @@
+.button__container {
+  @include margin(10px, 0px, 10px, 0px);
+}
+.button__container > p {
+  @include font(14px, 500, $black);
+  @include margin(8px, 0px, 8px, 0px);
+}
+.buttons__box {
+  @include grid(repeat(2, minmax(0, 1fr)), 40px);
+  grid-gap: 20px;
+  place-content: center;
+}
+button {
+  @include font(15px, 700, $black);
+  @include flex(center, center, row);
+  background-color: $white;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+button > i {
+  @include margin(0px, 5px, 0px, 0px);
+  @include font(20px, none, none);
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .buttons__box {
+    @include grid(repeat(2, minmax(50px, 150px)), 35px);
+  }
+  button {
+    @include font(14px, 700, $black);
+  }
+  button > i {
+    @include margin(0px, 3px, 0px, 0px);
+    @include font(18px, none, none);
+  }
+}

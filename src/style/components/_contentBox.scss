@@ -1,0 +1,21 @@
+.content__box {
+  @include flex(center, center, row);
+  @include padding(50px, 80px, 50px, 80px);
+  background-color: $white;
+}
+
+.content__box > div {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .content__box {
+    @include padding(20px, 20px, 20px, 20px);
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  .content__box {
+    @include padding(10px, 10px, 10px, 10px);
+  }
+}

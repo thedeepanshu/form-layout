@@ -1,0 +1,13 @@
+.image__box {
+  background-image: url("https://images.pexels.com/photos/1841125/pexels-photo-1841125.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-color: #000000;
+  background-position: center bottom;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 600px){
+  .image__box{
+    display: none;
+  }
+}

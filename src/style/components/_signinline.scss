@@ -1,0 +1,25 @@
+.signin_line {
+    @include flex(center, center, row);
+    @include margin(12px, 0px, 10px, 0px);
+    width: 100%;
+    position: relative;
+  }
+  .signin_line::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: #d3d3d3;
+    z-index: 0;
+  }
+  .signin_line p {
+    color: #3a3a3a;
+    font-size: 14px;
+    background-color: $white;
+    padding: 5px 10px;
+    z-index: 1;
+    font-weight: 500;
+  }

@@ -1,0 +1,55 @@
+form {
+  @include grid(minmax(0 1fr), auto);
+}
+label {
+  @include margin(10px, 0px, 8px, 0px);
+  @include font(14px, 400, $black);
+}
+input {
+  @include padding(10px, 12px, 10px, 12px);
+  @include margin(0px, 0px, 10px, 0px);
+  @include font(14px, 400, $black);
+  width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  border-radius: 7px;
+  flex: 1;
+}
+input::placeholder {
+  @include font(13px, 400, #c1c5c9);
+}
+input[type="password"] {
+  @include font(15px, 700, $black);
+}
+input[type="checkbox"] {
+  @include margin(4px, 5px, inherit, 0px);
+  @include box(17px, 17px);
+  display: inline-block;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  border-radius: 2px;
+}
+
+.flex {
+  @include flex(space-between, center, row);
+}
+
+.wrapper {
+  gap: 10px;
+}
+
+p {
+  @include font(13px, 700, $unique);
+  cursor: pointer;
+}
+
+p > a {
+  text-decoration: none;
+  color: $unique;
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .wrapper {
+    @include flex(center, center, column);
+  }
+}

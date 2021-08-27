@@ -1,0 +1,20 @@
+.container {
+  @include grid(1fr 1.1fr, 1fr);
+  @include padding(20px, 20px, 20px, 20px);
+  @include box(100%, calc(100vh - 100px));
+  min-height: 400px;
+}
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  .container {
+    @include grid(1fr, 1fr);
+    @include box(100%, calc(100vh - 20px));
+    padding: 0px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+  .container {
+    @include grid(1fr, 1fr);
+    @include box(100%, calc(100vh - 40px));
+  }
+} ;
